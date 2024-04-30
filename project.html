@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Newsletter Sign-Up</title>
     <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans+Text:500&amp;lang=en">
+    <script src="./app.js"></script>
+     <script src="project.js"></script>
+     <script src="https://unpkg.com/i18next@latest/dist/umd/i18next.min.js"></script>
+
 </head>
 <body>
+   
 
 <!-- Form container for the newsletter sign-up -->
 <div class="form-container">
@@ -105,7 +111,7 @@
 
                                     <!-- map -->
 
-<body>
+
     <div class="card">
       <header class="card-headerm green">
         <div class="header-content">
@@ -114,22 +120,19 @@
         </div>
       </header>
       <main class="map-content">
-        <iframe
-          src="YOUR_MAP_EMBED_URL_HERE"
-          width="100%"
-          height="100%"
-          frameborder="0"
-          style="border:0;"
-          allowfullscreen=""
-          aria-hidden="false"
-          tabindex="0">
-        </iframe>
+        <iframe src="https://storage.googleapis.com/maps-solutions-dogxgk051c/address-selection/n85m/address-selection.html"
+  width="30%" height="20%"
+  style="border:0;"
+  loading="lazy">
+</iframe>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8X1Z_zG_pWOeblGnBeBxKQl-JnG789Nk&callback=initMap&solution_channel=GMP_QB_addressselection_v2_cABC" async defer></script>
       </main>
     </div>
-
+   
+    
                                     <!--messages -->
 <div class="card">
-  <header class="card-header green">
+  <header class="card-headerm green">
     <div class="header-content">
       <button class="back-button">&larr;</button>
       <h2>Messages</h2>
@@ -174,18 +177,23 @@
 
 
                                         <!--settings  -->
-<div class="settings-container">
-  <div class="header">
-    <a href="#" class="back-button">&larr;</a>
-    <h1 >Settings</h1>
-  </div>
+
+    <div class="app-container">
+     
+      <header class="card-headerm green">
+        <div class="header-content">
+          <button class="back-button">&larr;</button>
+          <h2>Settings </h2>
+        </div>
+      </header>
+   
   <ul class="settings-list">
-    <li><a href="#">User<img src="right-arrow.svg" alt=">" class="right-arrow"></a></li>
-    <li><a href="#">Account<img src="right-arrow.svg" alt=">" class="right-arrow"></a></li>
-    <li><a href="#">Privacy<img src="right-arrow.svg" alt=">" class="right-arrow"></a></li>
-    <li><a href="#">Language<img src="right-arrow.svg" alt=">" class="right-arrow"></a></li>
-    <li><a href="#">Accessibility<img src="right-arrow.svg" alt=">" class="right-arrow"></a></li>
-    <li><a href="#">Help<img src="right-arrow.svg" alt=">" class="right-arrow"></a></li>
+    <li><a href="#">User<img src="fb.png" alt=">" class="right-arrow"></a></li>
+    <li><a href="#">Account<img src="account.png" alt=">" class="right-arrow"></a></li>
+    <li><a href="#">Privacy<img src="privacy.png" alt=">" class="right-arrow"></a></li>
+    <li><a href="#">Language<img src="Language.png" alt=">" class="right-arrow"></a></li>
+    <li><a href="#">Accessibility<img src="Accessibility.png" alt=">" class="right-arrow"></a></li>
+    <li><a href="#">Help<img src="help.png" alt=">" class="right-arrow"></a></li>
   </ul>
   <button class="log-out-button">Log Out</button>
 </div>
@@ -200,17 +208,17 @@
     </div>
     <form class="resources-form">
       <div class="resource-item">
-        <img src="advisor-icon.svg" alt="Contact Advisor">
+        <img src="adviser.png" alt="Contact Advisor">
         <span>Contact Advisor</span>
         <input type="checkbox" name="contact_advisor">
       </div>
       <div class="resource-item">
-        <img src="counselor-icon.svg" alt="Contact Counselor">
+        <img src="counselor.png" alt="Contact Counselor">
         <span>Contact Counselor</span>
         <input type="checkbox" name="contact_counselor">
       </div>
       <div class="resource-item">
-        <img src="translator-icon.svg" alt="Contact Translator">
+        <img src="translate.png" alt="Contact Translator">
         <span>Contact Translator</span>
         <input type="checkbox" name="contact_translator">
       </div>
@@ -260,9 +268,11 @@
  
     <div class="app-container">
      
-      <header class="app-header">
-        <button class="back-button">&larr;</button>
-        <h1>Post</h1>
+      <header class="card-headerm green">
+        <div class="header-content">
+          <button class="back-button">&larr;</button>
+          <h2>Post </h2>
+        </div>
       </header>
     
       <main class="app-main">
@@ -271,6 +281,7 @@
           <box>
          <input type="file" name="picture"/>
         </box>
+        
          
           <textarea placeholder="Write caption..." rows="3"></textarea>
           <!-- Tag people option -->
@@ -290,15 +301,16 @@
     </div>
 
  
-    <!--communinty   -->
+                          <!--communinty   -->
 
     <div class="app-container">
     
-      <header class="app-header">
-        <button class="back-button">&larr;</button>
-        <h1>Community</h1>
+      <header class="card-headerm green">
+        <div class="header-content">
+          <button class="back-button">&larr;</button>
+          <h2> Communinty</h2>
+        </div>
       </header>
-     
       <main class="app-main">
         <div class="community-post">
           <img src="community-image.png" alt="Community Post Image" class="community-image">
@@ -312,7 +324,44 @@
         <!-- Repeat for additional posts -->
       </main>
     </div>
+                            <!-- language -->
+   
+        <div class="app-container">
+          <header class="card-headerm green">
+            <div class="header-content">
+              <button class="back-button">&larr;</button>
+              <h2>language </h2>
+            </div>
+          </header>
+
+
+          
+          <div id="google_translate_element"></div>
+
+          <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+          }
+          </script>
+          
+          <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+          
+          
+        </div>
+
+
+        <!--       open messages-->
+
+        <div class="app-container">
+          <header class="card-headerm green">
+            <div class="header-content">
+              <button class="back-button">&larr;</button>
+              <h2>user </h2>
+            </div>
+          </header>
+
+
     
-
-
+      
 </body>
+</html>
