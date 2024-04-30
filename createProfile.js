@@ -31,6 +31,12 @@ document.addEventListener('DOMContentLoaded', () =>
             alert('Please enter a valid csus email address');
             return;
         }
-        //need to add a link to the database here, store the profile
+        const doesExist = await doesUserExist('email');
+        if (doesExist)
+        {
+            alert('Email is already in use');
+            return;
+        }
+        addUser('email', 'username', 'password');
     });
 });
