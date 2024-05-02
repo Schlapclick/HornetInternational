@@ -1,0 +1,81 @@
+class Post {
+  constructor(author, title, text, likes, comments) {
+    this.author = author;
+    this.title = title;
+    this.text = text;
+    this.likes = likes;
+    this.comments = comments;
+  }
+
+  getAuthor() {
+    return this.author;
+  }
+
+  getTitle() {
+    return this.title;
+  }
+
+  getText() {
+    return this.text;
+  }
+
+  getLikes() {
+    return this.likes;
+  }
+
+  getComments() {
+    return this.comments;
+  }
+
+  getNumComments() {
+    return this.comments.length;
+  }
+
+  setAuthor(newAuthor) {
+    this.author = newAuthor;
+  }
+
+  setText(newText) {
+    this.text = newText;
+  }
+
+  create() {
+    // TODO: Add post to database
+  }
+
+  delete() {
+    // TODO: Remove post from database
+  }
+
+  like() {
+    this.likes++;
+  }
+
+  dislike() {
+    this.likes--;
+  }
+}
+
+class Reply extends Post {
+  constructor(op, author, text, likes, comments) {
+    super(author, null, text, likes, comments);
+    this.op = op;
+  }
+
+  getOP() {
+    return this.op;
+  }
+
+  create() {
+    // TODO: Add reply to comments of another post/reply
+  }
+
+  delete() {
+    if (this.comments.length === 0) {
+      // TODO: Remove reply from comments of another post/reply
+    } else {
+      this.author = null;
+      this.text = "[Removed]";
+    }
+  }
+}
