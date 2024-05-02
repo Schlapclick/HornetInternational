@@ -2,6 +2,7 @@ import mysql from "mysql2"
 
 //tables
 const tableUsers = "users"
+//const tableMessages = "messages"
 
 // create a new MySQL connection
 const connection = mysql.createPool({
@@ -54,6 +55,11 @@ const doesExist = await DoesUserExist("jsmith@csus.edu")
 if (doesExist) {
 
 }
+//async function AddMessage(sender, receiver, message) {
+    //var command = "INSERT INTO " + tableMessages + ' VALUES ("' + sender + '", "' + receiver + '", "' + message + '")'
+    //const result = await connection.query(command)
+  //  return result[0]
+//}
 
 
 
