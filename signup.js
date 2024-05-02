@@ -16,7 +16,7 @@ app.post('/signup', async (req, res) => {
 
     if (!success && isValidID(tEmail)) {
       const usr = await AddUser(tEmail, "", "", tPassword, tUsername)
-      res.redirect('/home.html')
+      res.redirect('/login.html')
     }
     else {
       res.redirect('/signup.html')
