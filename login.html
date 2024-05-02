@@ -9,7 +9,7 @@
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans+Text:500&amp;lang=en">
      <script src="./app.js"></script>
       <script src="project.js"></script>
-      <script src="backend.js"></script>
+      <script src="LoginForgotPassword.js"></script>
       <script src="https://unpkg.com/i18next@latest/dist/umd/i18next.min.js"></script>
 </head>
 <body>
@@ -22,12 +22,12 @@
    
     <img src="ellipse1.png" alt="Herky International Logo" class="logo">
     
-    <form action="project.html">
+    <form action="http://localhost:5501/login" method="post">
         <input type="text" name="Username" placeholder="Username" required>
         <input type="password" name="Password" placeholder="Password" required>
         <a href="recoverPassword.html">Forgot Password?</a>
         <button type="submit">Log In</button>
-        <p>Don't have an account? <a href="index.html">Sign up here</a></p>
+        <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
     </form>
 </div>
 
