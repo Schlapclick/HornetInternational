@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="card-headerm green">
+          <div class="header-content">
+            <a href="messages1.html" > <button class="back-button" >&larr;</button></a>   
+           
+          </div>
+        </header>
+    
+      
+      
+      <div class="scrollable-content">
+        <div id="messageContainer">
+            <!-- Messages will be loaded here -->
+            
+        </div>
+      
+        <span style="text-decoration: underline; color: blue;" > WORRIOR </span>
+      </div>
+
+      <style>
+        .scrollable-content {
+          height: 330px;  /* or any fixed size */
+          overflow: auto; /* enables scrolling if content overflows */
+        }
+      </style>
+        <form id="messageForm">
+            <input type="text" id="messageInput" placeholder="Type your message here..." required>
+            
+        <button type="submit">Send</button>
+       
+        </form>
+       
+    <script src="messages.js"></script>
+</body>
+</html>
+
