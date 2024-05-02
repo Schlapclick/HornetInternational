@@ -1,10 +1,13 @@
 // Data of upcoming events
 const eventsData = [
-    { name: 'Event 1', date: '2024-05-01' },
-    { name: 'Event 2', date: '2024-05-05' },
-    { name: 'Event 3', date: '2024-05-10' },
-    { name: 'Event 4', date: '2024-05-15' },
+    { name: 'Cultural day', date: '2024-05-01' },
+    { name: 'Reggaethon concert', date: '2024-05-05' },
+    { name: 'Internship workshop ', date: '2024-05-10' },
+    { name: 'Game night', date: '2024-05-15' },
   ];
+  
+  // Array to store subscribed events
+  const subscribedEvents = [];
   
   // Function to filter events based on date range
   function filterEventsByDateRange(startDate, endDate) {
@@ -14,7 +17,7 @@ const eventsData = [
   // Function to display upcoming events
   function displayUpcomingEvents(startDate, endDate) {
     const filteredEvents = filterEventsByDateRange(startDate, endDate);
-    
+  
     if (filteredEvents.length === 0) {
       console.log("No events found in the given date range.");
       return;
@@ -27,8 +30,7 @@ const eventsData = [
   }
   
   // Function to subscribe to an event
-  
-function subscribeToEvent(eventName) {
+  function subscribeToEvent(eventName) {
     const event = eventsData.find(event => event.name === eventName);
     if (event) {
       subscribedEvents.push(event);
@@ -38,10 +40,9 @@ function subscribeToEvent(eventName) {
     }
   }
   
-  
   // Function to unsubscribe from an event
   function unsubscribeFromEvent(eventName) {
-    const index = subscribedEvents.indexOf(eventName);
+    const index = subscribedEvents.findIndex(event => event.name === eventName);
     if (index !== -1) {
       subscribedEvents.splice(index, 1);
       console.log(`Unsubscribed from ${eventName}`);
@@ -50,18 +51,16 @@ function subscribeToEvent(eventName) {
     }
   }
   
-  
-  // Example usage
+  // Dates for filtering events
   const startDate = '2024-05-01';
   const endDate = '2024-05-15';
   
   // Display upcoming events in the given date range
   displayUpcomingEvents(startDate, endDate);
   
-  // Example subscription
-  subscribeToEvent('Event 1');
+  // event subscription
+  subscribeToEvent('Cultural day');
   
-  // Example unsubscription
-  unsubscribeFromEvent('Event 2');
-  
+  // event unsubscription
+  unsubscribeFromEvent('Cultural day');
   
