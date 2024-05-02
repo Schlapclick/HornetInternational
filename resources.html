@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and linking to the CSS stylesheet -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Sign-Up</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans+Text:500&amp;lang=en">
+    <script src="./app.js"></script>
+     <script src="project.js"></script>
+     <script src="https://unpkg.com/i18next@latest/dist/umd/i18next.min.js"></script>
+
+</head>
+<body>
+
+<div class="resources-container">
+    <div class="header">
+      <a href="home.html" class="back-button">&larr;</a>
+      <h1>Resources</h1>
+    </div>
+    <form class="resources-form">
+      <div class="resource-item">
+        <img src="adviser.png" alt="Contact Advisor">
+        <span>Contact Advisor</span>
+        <input type="checkbox" name="contact_advisor">
+      </div>
+      <div class="resource-item">
+        <img src="counselor.png" alt="Contact Counselor">
+        <span>Contact Counselor</span>
+        <input type="checkbox" name="contact_counselor">
+      </div>
+      <div class="resource-item">
+        <img src="translate.png" alt="Contact Translator">
+        <span>Contact Translator</span>
+        <input type="checkbox" name="contact_translator">
+      </div>
+      <textarea name="queries" placeholder="Any questions..."></textarea>
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>

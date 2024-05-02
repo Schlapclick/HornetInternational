@@ -61,5 +61,3 @@ const usr = await GetUser("nicolasschallock@csus.edu")
 const table = await GetTable(tableUsers)
 console.log(usr)
 console.log(user)
-
-connection.end()
