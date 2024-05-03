@@ -7,44 +7,37 @@
     <title>Newsletter Sign-Up</title>
     <link rel="stylesheet" href="project.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans+Text:500&amp;lang=en">
+    <script src="./app.js"></script>
+     <script src="community.js"></script>
      <script src="https://unpkg.com/i18next@latest/dist/umd/i18next.min.js"></script>
 
 </head>
 <body>
-
-
+  <div class="scrollable-content">
 <div class="app-container">
-     
+    
     <header class="card-headerm green">
       <div class="header-content">
-        <a href="community.html"><button class="back-button">&larr;</button></a>
-        <h2>Post </h2>
+        <a href="home.html"><button class="back-button">&larr;</button></a>
+        <h2> Communinty</h2>
       </div>
     </header>
     <main class="app-main">
-      <div class="post-section">
-        
-        <box>
-       <input type="file" name="picture"/>
-      </box>
-      
-       
-        <textarea placeholder="Write caption..." rows="3"></textarea>
-        <!-- Tag people option -->
-        <div class="post-option">
-          <span>Tag people</span>
-          <span class="arrow">&rarr;</span>
+      <div class="community-post">
+        <img src="img.png" alt="Community Post Image" class="community-image" width="100" height="200">
+        <div class="post-interactions">
+          <button id="like-btn" class="like-button">Like</button>
+          <a href="comments.html" class="comment-button">Comment</a>
+          <a href="share.html" class="share-button">Share</a>
+          <a href="save.html" class="save-button">Save</a>
         </div>
-        <!-- Add location option -->
-        <div class="post-option">
-          <span>Add location</span>
-          <span class="arrow">&rarr;</span>
-        </div>
-      <div>
-        <!-- Post submission button -->
-        <a href="community2.html"><button class="submit-button">Post</button></a>
       </div>
+
+      
+      <!-- Repeat for additional posts -->
+      
     </main>
+    <a href="post.html"><button type="add" style="margin-top: -20px; font-size: xx-small;  "><h1 > + </h1></button></a>
 
     <div id="google_translate_element"></div>
 
@@ -58,7 +51,16 @@
     
     
   </div>
-  </div>
 
+
+  </div>
+ 
+  <style>
+    .scrollable-content {
+        /* or any fixed size */
+      overflow:scroll; /* enables scrolling if content overflows */
+    }
+  </style>
+ </div>
 </body>
 </html>

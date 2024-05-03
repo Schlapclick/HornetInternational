@@ -2,5 +2,6 @@
 
 node LoginForgotPassword.js &
 node signup.js &
+node events.js &
 
 wait
