@@ -1,4 +1,4 @@
-var ActiveUser = "fred@csus.edu"
+var ActiveUser = "nicolasschallock@csus.edu"
 
 export { SetActiveUser, GetActiveUser }
 
