@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans+Text:500&amp;lang=en">
     <script src="./app.js"></script>
      <script src="project.js"></script>
+     <script src="events.js"></script>
      <script src="https://unpkg.com/i18next@latest/dist/umd/i18next.min.js"></script>
 
 </head>
@@ -20,13 +21,13 @@
         <h1>Events</h1>
     </header>
 
-    <section class="event-list">
+    <form class="event-list" action="http://localhost:5502/events" method="post">
       
         <article class="event">
             <a href="displayEvent.html"><h2>Event Title 1</h2></a>
             <input type="date" id="today" name="today">
             
-            <input type="checkbox" style="margin-left: 100px; size: 100px;"/>  
+            <input type="checkbox" name="event1" style="margin-left: 100px; size: 100px;"/>  
         </article>
      
 
@@ -34,7 +35,7 @@
           <h2>Event Title 2</h2>
           <input type="date" id="today" name="today">
           
-          <input type="checkbox" style="margin-left: 100px; size: 100px;"/>  
+          <input type="checkbox" name="event2" style="margin-left: 100px; size: 100px;"/>  
         </article>
 
 
@@ -42,18 +43,18 @@
         <h2>Event Title 3</h2>
         <input type="date" id="today" name="today">
         
-        <input type="checkbox" style="margin-left: 100px; size: 100px;"/>  
+        <input type="checkbox" name="event3" style="margin-left: 100px; size: 100px;"/>  
     </article>
 
     <article class="event">
         <h2>Event Title 4</h2>
         <input type="date" id="today" name="today">
         
-        <input type="checkbox" style="margin-left: 100px; size: 100px;"/>  
+        <input type="checkbox" name="event4" style="margin-left: 100px; size: 100px;"/>  
     </article>
-    
+    <a href="events.html"><button type="submit">Subscribe</button></a>
 
-    </section>
+    </form>
 </div>
 
 </body>

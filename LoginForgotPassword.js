@@ -1,3 +1,4 @@
+import { SetActiveUser } from './ActiveUser.js';
 import {DoesUserExist, isValidPassword} from './database.js'
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -23,6 +24,7 @@ app.post('/login', async (req, res) => {
     if (success) {
       const success = await isValidPassword(retrievedEmail, retrievedPassword)
       if (success) {
+        await SetActiveUser(retrievedEmail)
         res.redirect('/home.html')
       }
       else {res.redirect('/login.html')}

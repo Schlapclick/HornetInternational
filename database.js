@@ -2,6 +2,7 @@ import mysql from "mysql2"
 
 //tables
 const tableUsers = "users"
+const tableEvents = "student_events"
 //const tableMessages = "messages"
 
 // create a new MySQL connection
@@ -12,7 +13,7 @@ const connection = mysql.createPool({
   database: 'test_database'
 }).promise()
 
-export {GetUser, DoesUserExist, isValidPassword, AddUser}
+export {GetUser, DoesUserExist, isValidPassword, AddUser, SetEventsForUser}
 
 async function GetUser(email) {
     const temp = await GetValue(tableUsers, "email", "email", email)
@@ -52,6 +53,7 @@ async function GetColumn(table, column) {
 async function AddUser(email, first, last, passcode, username) {
     var command = "INSERT INTO " + tableUsers + ' VALUES ("' + email + '", "' + first + '", "' + last + '", "' + passcode + '", "' + username + '")'
     const result = await connection.query(command)
+    await CreateUserEvents(email)
     return result[0]
 }
 
@@ -60,6 +62,25 @@ async function RemoveUser(email) {
     const result = await connection.query(command)
 }
 
+async function CreateUserEvents(email) {
+    var command = "INSERT INTO " + tableEvents + ' VALUES ("' + email + '", false, false, false, false)'
+    const result = await connection.query(command)
+    return result
+}
+
+async function SetEventsForUser(user, event1, event2, event3, event4) {
+    if (event1 == "on") event1 = true
+    else event1 = false
+    if (event2 == "on") event2 = true
+    else event2 = false
+    if (event3 == "on") event3 = true
+    else event3 = false
+    if (event4 == "on") event4 = true
+    else event4 = false
+    var command = "UPDATE " + tableEvents + " SET event1 = " + event1 + ", event2 = " + event2 + ", event3 = " + event3 + ", event4 = " + event4 + ' WHERE email = "' + user + '"'
+    const result = await connection.query(command)
+    return result
+}
 //const remove = await RemoveUser("nicolasschallock@csus.edu")
 //const user = await AddUser("nicolasschallock@csus.edu", "Nicolas", "Schallock")
 //async function AddMessage(sender, receiver, message) {
