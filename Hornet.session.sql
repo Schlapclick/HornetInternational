@@ -1,1 +1,2 @@
-SELECT * FROM use
+SELECT * FROM users;
+SELECT * FROM student_events;

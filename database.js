@@ -92,12 +92,12 @@ async function SetEventsForUser(user, event1, event2, event3, event4) {
 
 
 //const usr = await AddUser("jcena@csus.edu", "John", "Cena", "12345")
-const table = await GetTable(tableUsers)
-const validusr = await DoesUserExist("jena@csus.edu")
-const validpass = await isValidPassword("jcena@csus.edu", "12345");
-console.log(validusr)
-console.log(validpass);
-console.log(table)
+//const table = await GetTable(tableUsers)
+//const validusr = await DoesUserExist("jena@csus.edu")
+//const validpass = await isValidPassword("jcena@csus.edu", "12345");
+//console.log(validusr)
+//console.log(validpass);
+//console.log(table)
 //console.log(usr)
 
 //connection.end()
